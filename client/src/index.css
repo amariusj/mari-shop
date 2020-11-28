@@ -1,0 +1,110 @@
+.App {
+  max-width: 1230px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 28px;
+  box-shadow: 0 0 35px #eee;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+@import "./components/Headers/header.css";
+
+@import "./components/Mainpages/products/products.css";
+
+@import "./components/Mainpages/detailProduct/detailProduct.css";
+
+@import "./components/Mainpages/auth/login.css";
+
+@import "./components/Mainpages/cart/cart.css";
+
+@import "./components/Mainpages/history/history.css";
+
+@import "./components/Mainpages/categories/categories.css";
+
+@import "./components/Mainpages/createProduct/createProduct.css";
+
+/* ----------------------- Responsive ----------------------- */
+
+@media (max-width: 820px){
+  header .logo{
+    min-width: 115px;
+    flex: none;
+  }
+  header ul{
+   padding: 10px 0;
+  }
+}
+@media (max-width: 720px){
+  header ul{
+   position: fixed;
+   margin-top: 0;
+   top:0;
+   left: -100%;
+   width: 100%;
+   height: 100vh;
+   background: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   opacity: 0.98;
+   z-index: 99;
+   transition: 0.5s ease-in;
+  }
+  header .menu{
+    display: block;
+    cursor: pointer;
+  }
+  header ul li .menu{
+    position: absolute;
+    top:20px;
+    right: 20px;
+  }
+  header{
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 570px) {
+  .filter_menu .row span {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .App {
+    padding: 0 10px;
+  }
+  .detail {
+    font-size: 100%;
+    padding: 0;
+  }
+  .filter_menu input {
+    margin: 0;
+  }
+  .filter_menu .sort {
+    flex: 1;
+  }
+  .filter_menu .sort select {
+    width: 100%;
+    min-width: 290px;
+    margin: 5px 0;
+  }
+  .login-page {
+    padding: 30px 15px;
+  }
+}
